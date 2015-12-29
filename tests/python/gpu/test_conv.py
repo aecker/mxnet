@@ -26,7 +26,7 @@ def get_conv():
 
 def get_iter(data_dir):
     if data_dir == 'data':
-        sys.path.append(os.path.join(curr_path, '../common/'))
+        sysath.append(os.path.join(curr_path, '../common/'))
         import get_data
         get_data.GetMNIST_ubyte()
     batch_size = 100
@@ -45,7 +45,7 @@ def get_iter(data_dir):
 logging.basicConfig(level=logging.DEBUG)
 
 num_gpus = 1
-data_dir = 's3://dmcl/mnist'
+data_dir = '/home/ubuntu/mnist'
 
 (train, val) = get_iter(data_dir)
 
