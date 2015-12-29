@@ -135,7 +135,8 @@ model_executor.content.copyto(content_array)
 
 # train
 img = mx.nd.zeros(content_np.shape, ctx=dev)
-img[:] = mx.rnd.uniform(-0.1, 0.1, img.shape)
+#img[:] = mx.rnd.uniform(-0.1, 0.1, img.shape)
+img[:] = content_np;
 
 lr = mx.lr_scheduler.FactorScheduler(step=10, factor=.9)
 
